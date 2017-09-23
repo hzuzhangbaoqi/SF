@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Hover Div</title>
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <style>
+        button {
+            width: 100px;
+            height: 40px;
+            margin: 200px 0 0 200px;
+        }
+        .tip {
+            display: none;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            position: absolute;
+            background-color: orange;
+            margin: -140px 0 0 200px;
+        }
+    </style>
+</head>
+<body>
+    <button>Hover me</button>
+    <div class="tip">二维码</div>
+</body>
+<script>
+    $(function() {
+        $('button').hover(function() {
+            $('.tip').show();
+        }, function() {
+            $('.tip').hide();
+        })
+    })
+</script>
+</html>
